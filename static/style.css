@@ -1,0 +1,183 @@
+/* ====== 전체 폰트 및 배경 ====== */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #008000;
+}
+
+h2 {
+    text-align: left;
+    color: #008000;
+}
+
+/* ====== 입력칸 ====== */
+form input[type="text"], form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%; /* 모든 입력칸 동일 길이 */
+}
+
+/* 검색 입력칸만 flex 적용 */
+#searchForm {
+    display: flex;
+    gap: 5px;
+}
+
+#searchForm input[type="text"] {
+    flex: 1;
+}
+
+#searchForm button {
+    width: auto;
+}
+
+/* ====== 버튼 ====== */
+form button.green-btn {
+    background-color: #008000; /* 초록색 */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button.green-btn:hover {
+    background-color: #006400; /* 진한 초록 */
+}
+
+/* 등록/질문등록 버튼 크기 1/4 */
+form button.full-btn {
+    width: 25%;
+    margin-top: 5px;
+}
+
+/* ====== 입력폼 inline 스타일 ====== */
+.form-inline {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* ====== 리스트 스타일 ====== */
+#books > div, #readBooksList li, #questionsList li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
+
+/* 내부 제목과 문단 마진 제거 */
+#books > div h3,
+#books > div p {
+    margin: 5px 0; /* 기본 마진 대신 작게 설정 */
+}
+
+.book-title, .q-title {
+    font-weight: bold;
+    cursor: pointer;
+    color: #008000;
+}
+
+.book-detail, .q-content {
+    display: none;
+    margin-top: 5px;
+    padding: 8px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.delete-btn, .q-delete-btn {
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+
+.qa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.qa-title-author {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.q-author {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.answers p {
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 2px solid #008000;
+}
+
+/* ====== 답변 입력 ====== */
+.answer-input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.answer-btn {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 5px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: #006400;
+}
+
+/* ====== 페이지네이션 ====== */
+.pagination-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pagination-container button {
+    margin: 0 3px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.pagination-container button:disabled {
+    background-color: #008000;
+    color: #fff;
+    cursor: default;
+}
+
+.pagination-container button:hover:not(:disabled) {
+    background-color: #ddd;
+}

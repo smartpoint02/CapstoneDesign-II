@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>소설책 추천 사이트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>
+        📚 소설책 추천 사이트
+        <span style="display:inline-block; transform: scaleX(-1);">📚</span>
+    </h1>
+
+    <!-- ================= 책 추천 ================= -->
+    <h2 class="section-title">책 추천</h2>
+    <form id="searchForm" class="form-inline">
+        <input type="text" id="keyword" placeholder="키워드를 입력하세요" required />
+        <button type="submit" class="green-btn full-btn">검색</button>
+    </form>
+    <div id="books"></div>
+
+    <!-- ================= 읽은 책 기록 ================= -->
+    <h2 class="section-title">읽은 책 기록</h2>
+    <form id="readForm">
+        <input type="text" id="bookTitle" placeholder="책 제목" required /><br/>
+        <input type="text" id="bookAuthor" placeholder="저자" required /><br/>
+        <textarea id="bookReview" placeholder="리뷰" required></textarea><br/>
+        <button type="submit" class="green-btn full-btn">등록</button>
+    </form>
+    <h3>기록함</h3>
+    <ul id="readBooksList"></ul>
+    <div class="pagination-container" id="readPagination"></div>
+
+    <!-- ================= Q&A ================= -->
+    <h2 class="section-title">Q&A 커뮤니티</h2>
+    <form id="qaForm">
+        <input type="text" id="qaTitle" placeholder="질문 제목" required />
+        <input type="text" id="qaAuthor" placeholder="작성자 이름" required /><br/>
+        <input type="password" id="qaPassword" placeholder="비밀번호 (삭제용)" required /><br/>
+        <textarea id="qaQuestion" placeholder="질문 내용을 입력하세요" required></textarea><br/>
+        <button type="submit" class="green-btn full-btn">질문 등록</button>
+    </form>
+    <h3>게시판</h3>
+    <ul id="questionsList"></ul>
+    <div class="pagination-container" id="qaPagination"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
